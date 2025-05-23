@@ -9,9 +9,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Contracts\View\View;
 
 // Route ke halaman welcome
-Route::get('/', function () {
-    return view('dashboard');
-});
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 
 Route::get('/register', [AuthController::class, 'register'])->name('auth.register');
 Route::get('/login', [AuthController::class, 'login'])->name('auth.login');
