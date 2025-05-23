@@ -10,7 +10,7 @@ use Illuminate\Contracts\View\View;
 
 // Route ke halaman welcome
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::get('/register', [AuthController::class, 'register'])->name('auth.register');
